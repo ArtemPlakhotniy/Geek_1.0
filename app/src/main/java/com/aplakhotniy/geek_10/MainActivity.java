@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private Button greenBtn;
     private Button redBtn;
     private Button blueBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
