@@ -16,6 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".HomeWork_1"/>
+        <activity android:name=".HomeWork_2"/>
     </application>
 
 </manifest>

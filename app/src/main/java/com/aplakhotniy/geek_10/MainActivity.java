@@ -1,5 +1,6 @@
 package com.aplakhotniy.geek_10;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,42 +12,32 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView textView;
-    private Button greenBtn;
-    private Button redBtn;
-    private Button blueBtn;
+
+    private Button hw_Btn_1;
+    private Button hw_Btn_2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textView = (TextView)findViewById(R.id.textView);
+        hw_Btn_1 = (Button)findViewById(R.id.hw_Btn_1);
+        hw_Btn_2 = (Button)findViewById(R.id.hw_Btn_2);
 
-        greenBtn = (Button)findViewById(R.id.greenBtn);
-        redBtn = (Button)findViewById(R.id.redBtn);
-        blueBtn = (Button)findViewById(R.id.blueBtn);
-
-        greenBtn.setOnClickListener(new View.OnClickListener() {
+        hw_Btn_1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                textView.setTextColor(Color.GREEN);
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), HomeWork_1.class);
+                startActivity(i);
             }
         });
 
-        redBtn.setOnClickListener(new View.OnClickListener() {
+        hw_Btn_2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                textView.setTextColor(Color.RED);
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), HomeWork_2.class);
+                startActivity(i);
             }
         });
-
-        blueBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                textView.setTextColor(Color.BLUE);
-            }
-        });
-
     }
 }
